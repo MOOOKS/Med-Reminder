@@ -13,7 +13,7 @@ void main() async {
   GoRouter.optionURLReflectsImperativeAPIs = true;
   usePathUrlStrategy();
 
-  NotiService().initNotification();
+  await NotiService().initNotification();
 
 
   final appState = FFAppState(); // Initialize FFAppState

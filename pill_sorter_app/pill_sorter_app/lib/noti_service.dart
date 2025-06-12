@@ -15,7 +15,7 @@ class NotiService {
     if (_isInitialized) return; // prevent re-initialization
 
     tz.initializeTimeZones();
-    final String currentTimeZone = await FlutterTimezone.getLocalTimezone();
+    final String currentTimeZone = 'America/Los_Angeles';
     tz.setLocalLocation(tz.getLocation(currentTimeZone));
 
 
