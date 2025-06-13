@@ -35,7 +35,8 @@ class NotiService {
       iOS: initSettingsIOS,
     );
 
-    await notificationsPlugin.initialize(initSettings);
+    notificationsPlugin.initialize(initSettings);
+
     await notificationsPlugin
         .resolvePlatformSpecificImplementation<
         AndroidFlutterLocalNotificationsPlugin>()
