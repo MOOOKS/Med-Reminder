@@ -82,6 +82,29 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   ),
                 ),
               ),
+                        // 👇 Add it here
+    Padding(
+      padding: const EdgeInsets.only(top: 16.0),
+      child: FFButtonWidget(
+        onPressed: () async {
+          await launchURL('https://docs.google.com/forms/d/e/1FAIpQLSc-dF9BoaC0dbJbynPNIX2vaQWnaKcaIjqc03q_CkitZkhYNg/viewform?usp=dialog');
+        },
+        text: 'Give Feedback',
+        icon: const Icon(Icons.feedback, size: 24.0),
+        options: FFButtonOptions(
+          height: 50.0,
+          padding: const EdgeInsets.symmetric(horizontal: 24.0),
+          color: FlutterFlowTheme.of(context).primary,
+          textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+            fontFamily: 'Inter Tight',
+            color: Colors.white,
+            fontSize: 20.0,
+          ),
+          elevation: 2.0,
+          borderRadius: BorderRadius.circular(12.0),
+        ),
+      ),
+    ),
               Expanded(
                 child: SingleChildScrollView(
                   child: Builder(
