@@ -8,12 +8,12 @@ import 'package:flutter_web_plugins/url_strategy.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 
 void main() async {
+  debugPrint('⏱️ Flutter main() started');
   WidgetsFlutterBinding.ensureInitialized();
   GoRouter.optionURLReflectsImperativeAPIs = true;
   usePathUrlStrategy();
 
   await NotiService().initNotification();
-
 
   final appState = FFAppState(); // Initialize FFAppState
   await appState.initializePersistedState();
@@ -22,6 +22,8 @@ void main() async {
     create: (context) => appState,
     child: const MyApp(),
   ));
+
+  
 }
 
 class MyApp extends StatefulWidget {
